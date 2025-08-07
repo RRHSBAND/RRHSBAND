@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="Media\Photos\SchoolLogo\RoyalSoundLogo.png" type="image/svg+xml" />
+  <link rel="stylesheet" href="Css/about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>RRHS Band</title>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="Media\Photos\SchoolLogo\RoyalSoundLogo.png" alt="Band Logo" class="logo" />
+      <h1>RRHS Band</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="#about" class="nav-link active">About</a>
+      <a href="#sponsors" class="nav-link">Sponsors</a>
+      <a href="#events" class="nav-link">Events</a>
+      <a href="#media" class="nav-link">Media</a>
+      <a href="#students" class="nav-link">Leadership</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#resources" class="nav-link">Resources</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+<main>
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">About us!</h1>
+      <h1 class="hero-title2">The Royal Sound</h1>
+              <div class="hero-buttons">
+          <a href="index.html" class="btn btn-primary">Home Page</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="about-info">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card">
+          <h2>🎯 Our Mission</h2>
+          <p>The RRHS Band is dedicated to creating an environment where student musicians grow through performance, teamwork, and pride. We strive to represent the best of River Ridge with every note we play.</p>
+        </div>
+        <div class="about-card">
+          <h2>🎷 Who We Are</h2>
+          <p>We are a community of dedicated students, directors, and supporters who believe in the power of music. From football halftime shows to statewide competitions, we bring energy, passion, and talent to every event.</p>
+        </div>
+        <div class="about-card">
+          <h2>🏆 Why It Matters</h2>
+          <p>Our band builds more than music—it builds leadership, character, and lifelong friendships. Every rehearsal, game, and concert strengthens our connection and school spirit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-highlights">
+    <div class="container">
+      <h2 class="section-title">What Makes Us Stand Out</h2>
+      <div class="highlight-grid">
+        <div class="highlight-box">
+          <h3>🎺 Performances</h3>
+          <p>Whether it's under Friday night lights or on the competition field, we bring energy and excellence to every stage.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>🤝 Community</h3>
+          <p>We're more than just a band—we’re a family that supports one another both in and out of rehearsal.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>🌍 Opportunity</h3>
+          <p>Our students travel, perform, and compete at events that grow their skills and broaden their experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>RRHS Band</h3>
+          <p>The RRHS Band is a passionate community of student musicians dedicated to excellence, teamwork, and school spirit. Through performances, competitions, and local events, we strive to inspire and entertain while building lifelong memories and skills. Join us on our musical journey!</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="index.html/#contact">Contact</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#students">Student Resources</a></li>
+            <li><a href="#parents">Parent Resources</a></li>
+            <li><a href="#calandar">Calendar</a></li>
+            <li><a href="#media">Media Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RRHS Band. All rights reserved. - Made With 💖 By Avery & Alex</p>
+        <div class="footer-links">
+          <a href="#contact">Contact</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
