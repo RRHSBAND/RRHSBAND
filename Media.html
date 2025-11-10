@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Photo and video gallery for the River Ridge Royal Sound band.">
+	<link rel="icon" href="Media/Photos/SchoolLogo/RoyalSoundLogo.png" />
+	<link rel="stylesheet" href="Css/main.css">
+	<title>Media — RRHS Band</title>
+</head>
+<body>
+	<header>
+		<div class="logo-area">
+			<a href="index.html" aria-label="RRHS Band Home"><img src="Media/Photos/SchoolLogo/RoyalSoundLogo.png" alt="Band Logo" class="logo" /></a>
+			<h1>RRHS Band</h1>
+		</div>
+		<nav aria-label="Primary Navigation">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="About.html" class="nav-link">About</a>
+			<a href="Events.html" class="nav-link">Events</a>
+			<a href="Calendar.html" class="nav-link">Calendar</a>
+			<a href="Sponsors.html" class="nav-link">Sponsors</a>
+			<a href="Media.html" class="nav-link active">Media</a>
+			<a href="Student.html" class="nav-link">Leadership</a>
+			<a href="Volunteer.html" class="nav-link">Volunteer</a>
+			<a href="Parent.html" class="nav-link">Parents</a>
+		</nav>
+		<button class="mobile-menu-toggle" aria-label="Toggle navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</header>
+
+	<main style="padding-top:120px;">
+		<section class="container info">
+			<div class="section-header">
+				<h2>Media Gallery</h2>
+				<div class="section-divider"></div>
+			</div>
+
+			<div class="highlights-grid">
+				<article class="highlight-item">
+					<img src="Media/Photos/Concert/DSC02382.JPG" alt="Concert performance" />
+					<div class="highlight-content">
+						<h3>Concert Highlights</h3>
+						<p>Snapshots from recent concerts and performances.</p>
+					</div>
+				</article>
+
+				<article class="highlight-item">
+					<img src="Media/Photos/Banquet2025/DSC03086.JPG" alt="Banquet 2025" />
+					<div class="highlight-content">
+						<h3>Banquet 2025</h3>
+						<p>Memories from the 2025 banquet.</p>
+					</div>
+				</article>
+
+				<article class="highlight-item">
+					<img src="Media/Photos/Jazz/IMG_3991.jpg" alt="Jazz ensemble" />
+					<div class="highlight-content">
+						<h3>Knights of Jazz</h3>
+						<p>Our jazz ensemble in rehearsal and performance.</p>
+					</div>
+				</article>
+			</div>
+
+			<!-- Featured video removed per request -->
+
+			<div style="margin-top:40px;">
+				<h3 style="color:#fff; margin-bottom:12px;">Downloads</h3>
+				<ul style="color:#ccc;">
+					<li><a href="Media/Extra/PDFS/StudentParticipationForm25-26.pdf">Student Participation Form (25-26)</a></li>
+					<li><a href="Media/Extra/PDFS/TransportationForm25-26.pdf">Transportation Form (25-26)</a></li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>RRHS Band</h3>
+					<p>The RRHS Band is a passionate community of student musicians dedicated to excellence, teamwork, and school spirit.</p>
+				</div>
+				<div class="footer-section">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="About.html">About Us</a></li>
+						<li><a href="Events.html">Events</a></li>
+						<li><a href="Calendar.html">Calendar</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="Student.html">Student Resources</a></li>
+						<li><a href="Parent.html">Parent Resources</a></li>
+						<li><a href="Media.html">Media Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2025 RRHS Band. All rights reserved. - Made With 💖 By Avery & Alex</p>
+				<div class="footer-links">
+					<a href="index.html#contact">Contact</a>
+					<a href="#privacy">Privacy Policy</a>
+					<a href="#terms">Terms of Use</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+			document.querySelector('nav').classList.toggle('active');
+		});
+
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				// allow external anchors
+				if (!this.getAttribute('href').startsWith('#')) return;
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+		});
+	</script>
+</body>
+</html>
